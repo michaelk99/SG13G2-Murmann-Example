@@ -9,11 +9,11 @@ s.TEMP   = 300;
 s.VGS = (0:25e-3:1.2)';
 s.VDS = (0:25e-3:1.2)';
 s.VSB = (0:0.2:0.6)';
-s.L = [0.13 0.14 0.15 0.16 0.17 0.18 0.19 0.2 0.3 0.4 0.5 1 2 3]';
+s.L = [0.13 0.14 0.15 0.16 0.17 0.18 0.19 0.2 0.3 0.4 0.5 1 2 3 3.5 4 4.5 5 5.5 6 6.5 7 7.5 8 8.5 9 9.5 10]';
 s.W = 5;
 s.NFING = 1;
 
-t = readtable('sg13_lv_nmos.txt');
+t = readtable('./simulations/sg13_lv_nmos.txt');
 a = table2array(t);
 
 % column vectors from ngspice

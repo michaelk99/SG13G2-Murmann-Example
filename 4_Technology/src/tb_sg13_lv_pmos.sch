@@ -48,7 +48,7 @@ value="
 .param Lx=0.13u
 .param Vsbx=0
 .dc Vgs 0 1.2 25m Vds 0 1.2 25m
-.include tb_sg13_lv_pmos_save.spice
+.include /foss/designs/tb_sg13_lv_pmos_save.spice
 
 .control
 *pre_osdi ./psp103_nqs.osdi
@@ -56,8 +56,8 @@ set wr_singlescale
 *set wr_vecnames
 option numdgt = 3
 
-foreach L_val 0.13u 0.14u 0.15u 0.16u 0.17u 0.18u 0.19u
-+ 0.2u 0.3u 0.4u 0.5u 1u 2u 3u
+foreach L_val 0.13u 0.14u 0.15u 0.16u 0.17u 0.18u 0.19u 0.2u 0.3u 0.4u 0.5u 1u 2u 3u 
++ 3.5u 4u 4.5u 5u 5.5u 6u 6.5u 7u 7.5u 8u 8.5u 9u 9.5u 10u
   alterparam Lx = $L_val
   foreach Vsb_val 0 0.2 0.4 0.6
     alterparam Vsbx = $Vsb_val
